@@ -5,6 +5,27 @@ install monitroing systems and control the services
 
 install? default “master”입니다.
 
+Structure?
+
+|서비스 이름|기능|비유|
+|--------| ----|---|
+
+Prometheus: 수집, 저장, 조회 
+-> 건물의 온도, 전력, 장비 상태를 주기적으로 측정하는 센서, 측정한 값을 기록하는 현황판
+
+Grafana: 그래프, 대시보드
+-> 건물 관제실
+
+Alertmanager: 알림
+-> 건물 누수 발생 시 관리자 폰에 알람
+
+Operator: monitoring 시스템을 k8s안에서 생성하고 관리
+-> 건물 관리자
+
+
+Why? 원스톱 패키지 배포(모니터링 환경을 수동 설정 없이 하나로 빠르고 표준화되게 구축/운영 가능)
+-> toss vs 예전 타 은행 앱
+
 0) namespace 설정
 —--------------------------------------
 kubectl create namespace monitor
@@ -247,29 +268,8 @@ Add visualization을 누르고 데이터소스로 Prometheus를 선택
 —--------------------------------------
 
 
-Structure?
 
 
-
-Prometheus: 수집, 저장, 조회 
--> 건물의 온도, 전력, 장비 상태를 주기적으로 측정하는 센서, 측정한 값을 기록하는 현황판
-
-Grafana: 그래프, 대시보드
--> 건물 관제실
-
-Alertmanager: 알림
--> 건물 누수 발생 시 관리자 폰에 알람
-
-Operator: monitoring 시스템을 k8s안에서 생성하고 관리
--> 건물 관리자
-
-
-Why? 원스톱 패키지 배포(모니터링 환경을 수동 설정 없이 하나로 빠르고 표준화되게 구축/운영 가능)
--> toss vs 예전 타 은행 앱
-
-
-
-Structure?
 
 
 
